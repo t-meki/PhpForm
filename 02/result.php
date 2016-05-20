@@ -5,7 +5,6 @@
 </head>
 <body>
     <h2>お問い合わせ完了</h2>
-
     <p>姓名
         <?php echo $_POST["name1"] ." " .$_POST["name2"]; ?>
     </p>
@@ -66,5 +65,6 @@
         <?php echo $_POST["category"] ; ?>
     </p>
     <P>質問内容</p>
-    <p><?php echo $_POST["contents"] ; ?></p>
+        <textarea readonly cols="80" rows="12" name="contained" wrap="hard"><?php print $_POST["contents"] ; ?></textarea>
+
 </body>

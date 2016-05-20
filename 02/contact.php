@@ -3,6 +3,7 @@
     <title>PhpFormContact</title>
     <link rel="stylesheet" href="form_styles.css">
 </head>
+
 <body>
     <h1>お問い合わせフォーム</h1>
     <form action="result.php" method="post">
@@ -50,7 +51,7 @@
         ・質問内容
     </p>
     <p>　
-        <textarea cols="30" rows="5" name="contents"></textarea>
+        <textarea cols="80" rows="5" name="contents" ></textarea>
     </p>
     <p>
     <input type="submit" value="送信">
