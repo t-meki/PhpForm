@@ -1,18 +1,42 @@
+/* 初期設定
+---------------------------------------------------- */
+h1 {
+    text-align: center;
+    line-height: 2.2;
+}
+
+h2 {
+    text-align: center;
+    line-height: 2.0;
+}
 
 body {
     width: 600px;
     margin: 0 auto;
     padding: 0;
-}
-
-h1, h2 {
-    text-align: center;
-}
-
-
-
+    color: #333;
+    background :#fff;
 }
 
 p {
     line-height: 1.7;
+}
+
+
+dl {
+
+  width:300px;
+
+}
+
+dt {
+
+  float:left;
+
+}
+
+dd {
+
+  margin-left:80px;
+
 }
