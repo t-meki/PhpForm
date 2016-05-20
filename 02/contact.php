@@ -7,10 +7,10 @@
     <h1>お問い合わせフォーム</h1>
     <form action="result.php" method="post">
     <p>
-        ・姓　<input type="text" name="ｆay" size="20">
+        ・姓　<input type="text" name="name1" size="20">
     </p>
     <p>
-         名　<input type="text" name="name" size="20">
+         ・名　<input type="text" name="name2" size="20">
     </p>
     <p>
         ・性別
@@ -26,8 +26,8 @@
         -<input type="text" name="tel[]" size="5">
         -<input type="text" name="tel[]" size="5">
     </p>
-        ・メールアドレス　<input type="mail[]" name="mail" size="20">
-        ＠　<input type="text" name="mail[]" size="20">
+        ・メールアドレス　<input type="text" name="mail1" size="20">
+        ＠　<input type="text" name="mail2" size="20">
     </p>
     <p>
         ・どこで知ったか
@@ -50,8 +50,7 @@
         ・質問内容
     </p>
     <p>　
-        <textarea cols="30" rows="5" name="contents">
-        </textarea>
+        <textarea cols="30" rows="5" name="contents"></textarea>
     </p>
     <p>
     <input type="submit" value="送信">
