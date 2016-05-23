@@ -1,3 +1,4 @@
+<html>
 <head>
     <meta charset="UTF-8">
     <title>PhpFormContact</title>
@@ -21,7 +22,7 @@
     <tr>
         <td>・性別</td>
         <td>
-            <input type="radio" name="sex" value="c1">男
+            <input type="radio" name="sex" value="c1" checked="checked">男
             <input type="radio" name="sex" value="c2">女
             <input type="radio" name="sex" value="c3">不明
         </td>
@@ -79,3 +80,4 @@
     </p>
     </form>
 </body>
+</html>

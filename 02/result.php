@@ -9,66 +9,95 @@
     <table>
         <tr>
             <td>姓名</td>
-            <td><?php echo $_POST["name1"] ." " .$_POST["name2"]; ?></td>
+            <td>
+                <?php
+                    if($_POST["name1"]!=='' and $_POST["name2"]!==''){
+                        echo $_POST["name1"] ." " .$_POST["name2"];
+                    }else{
+                        echo "姓名を正しく入力してください ";
+                    }
+                ?>
+            </td>
         </tr>
         <tr>
             <td>性別</td>
-            <td><?php
-                    if($_POST["sex"]==='c1'){
+            <td>
+                <?php
+                    if ($_POST["sex"]==='c1'){
                         echo "男";
                     }elseif ($_POST["sex"]==='c2') {
                         echo "女";
                     }elseif ($_POST["sex"]==='c3') {
                         echo "不明";
+                    }else{
+                        echo "入力されていません" ;
                     }
                 ?>
             </td>
         </tr>
         <tr>
             <td>住所</td>
-            <td><?php echo $_POST["address"] ; ?></td>
+            <td>
+                <?php
+                if($_POST["address"]!==''){
+                    echo $_POST["address"] ;
+                }else{
+                    echo "入力されていません";
+                }
+                ?>
+            </td>
         </tr>
         <tr>
             <td>電話番号</td>
             <td>
                 <?php
-                    $i=0;
-                    foreach ($_POST["tel"] as $key => $value) {
-                        echo $value ;
-                        if($key < 2){
-                            echo " - ";
-                        }
+                    if($_POST["tel"][0]!=='' and $_POST["tel"][1]!=='' and $_POST["tel"][2]!==''){
+                        echo $_POST["tel"][0] ." - " .$_POST["tel"][1] ." - " .$_POST["tel"][2] ;
+                    }else{
+                        echo "入力されていません";
                     }
                 ?>
             </td>
         </tr>
         <tr>
             <td>メールアドレス</td>
-            <td><?php echo $_POST["mail1"] .'@' .$_POST["mail2"]; ?></td>
-        </tr>
-        <tr>
-            <td>どこで知ったか？&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
             <td>
                 <?php
-                    foreach ($_POST["cdx"] as $key => $value) {
-                        switch ($value) {
-                            case 'c1':
-                                echo "ネット　";
-                                break;
-                            case 'c2':
-                                echo "口コミ　";
-                                break;
-                            case 'c3':
-                                echo "街角　";
-                                break;
-                            case 'c4':
-                                echo "新聞・雑誌　";
-                                break;
-                            case 'c5':
-                                echo "その他　";
-                                break;
-                            default:
-                                break;
+                    if($_POST["mail1"]!=='' and $_POST["mail2"]!==''){
+                        echo $_POST["mail1"] .'@' .$_POST["mail2"];
+                    }else{
+                        echo "入力されていません" ;
+                    }
+                ?>
+            </td>
+        </tr>
+        <tr>
+            <td>どこで知ったか？&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td>
+                <?php
+                    if(!isset($_POST['cdx'])){
+                        echo "未入力" ;
+                    }else{
+                        foreach ($_POST["cdx"] as $key => $value) {
+                            switch ($value) {
+                                case 'c1':
+                                    echo "ネット　";
+                                    break;
+                                case 'c2':
+                                    echo "口コミ　";
+                                    break;
+                                case 'c3':
+                                    echo "街角　";
+                                    break;
+                                case 'c4':
+                                    echo "新聞・雑誌　";
+                                    break;
+                                case 'c5':
+                                    echo "その他　";
+                                    break;
+                                default:
+                                    break;
+                            }
                         }
                     }
                 ?>
