@@ -2,7 +2,7 @@
 ---------------------------------------------------- */
 h1 {
     text-align: center;
-    line-height: 2.2;
+    line-height: 2.0;
 }
 
 h2 {
@@ -20,23 +20,13 @@ body {
 
 p {
     line-height: 1.7;
+    margin-left: 30px;
 }
 
-
-dl {
-
-  width:300px;
+td {
+    line-height:2.2;
 
 }
-
-dt {
-
-  float:left;
-
-}
-
-dd {
-
-  margin-left:80px;
-
+table {
+    margin-left: 30px;
 }
