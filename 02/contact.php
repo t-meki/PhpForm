@@ -12,7 +12,7 @@
     <table rules="none">
     <tr>
         <td>・姓</td>　
-        <td><input type="text" name="name1" size="20"></td>
+        <td><input type="text" name="name1" size="20" /></td>
     </tr>
     <tr>
         <td>・名</td>
