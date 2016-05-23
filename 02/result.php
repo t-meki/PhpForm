@@ -4,7 +4,7 @@
     <title>PhpFormResult</title>
     <link rel="stylesheet" href="form_styles.css">
 </head>
-<body>
+<body style="background-color : #AAEEDD">
     <h2>お問い合わせ完了</h2>
     <table>
         <tr>
@@ -14,7 +14,7 @@
                     if($_POST["name1"]!=='' and $_POST["name2"]!==''){
                         echo $_POST["name1"] ." " .$_POST["name2"];
                     }else{
-                        echo "姓名を正しく入力してください ";
+                        echo "姓名が正しく入力されていません ";
                     }
                 ?>
             </td>
@@ -29,9 +29,7 @@
                         echo "女";
                     }elseif ($_POST["sex"]==='c3') {
                         echo "不明";
-                    }else{
-                        echo "入力されていません" ;
-                    }
+                    ｝
                 ?>
             </td>
         </tr>
@@ -42,7 +40,7 @@
                 if($_POST["address"]!==''){
                     echo $_POST["address"] ;
                 }else{
-                    echo "入力されていません";
+                    echo "未入力";
                 }
                 ?>
             </td>
@@ -54,7 +52,7 @@
                     if($_POST["tel"][0]!=='' and $_POST["tel"][1]!=='' and $_POST["tel"][2]!==''){
                         echo $_POST["tel"][0] ." - " .$_POST["tel"][1] ." - " .$_POST["tel"][2] ;
                     }else{
-                        echo "入力されていません";
+                        echo "正しく入力されていません";
                     }
                 ?>
             </td>
@@ -66,7 +64,7 @@
                     if($_POST["mail1"]!=='' and $_POST["mail2"]!==''){
                         echo $_POST["mail1"] .'@' .$_POST["mail2"];
                     }else{
-                        echo "入力されていません" ;
+                        echo "正しく入力されていません" ;
                     }
                 ?>
             </td>
@@ -109,7 +107,6 @@
         </tr>
     </table>
     <p>質問内容</p>
-        <p><textarea readonly cols="80" rows="12" name="contained" wrap="hard"><?php print $_POST["contents"] ; ?></textarea></p>
-
+        <p><textarea readonly cols="80" rows="12" name="contained" wrap="hard"><?php echo $_POST["contents"] ; ?></textarea></p>
     </body>
 </html>

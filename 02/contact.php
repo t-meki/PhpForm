@@ -8,7 +8,7 @@
 <header>
     <h1>お問い合わせフォーム</h1>
 </header>
-<body>
+<body style="background-color : #AAEEDD">
     <form action="result.php" method="post">
     <table rules="none">
     <tr>
@@ -29,7 +29,7 @@
     </tr>
     <tr>
         <td>・住所</td>
-        <td><input type="text" name="address" size="20"></td>
+        <td><input type="text" name="address" size="35"></td>
     </tr>
     <tr>
         <td>・電話番号</td>　
