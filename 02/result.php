@@ -29,7 +29,7 @@
                         echo "女";
                     }elseif ($_POST["sex"]==='c3') {
                         echo "不明";
-                    ｝
+                    }
                 ?>
             </td>
         </tr>
@@ -73,7 +73,7 @@
             <td>どこで知ったか？&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
             <td>
                 <?php
-                    if(!isset($_POST['cdx'])){
+                    if(!isset($_POST["cdx"])){
                         echo "未入力" ;
                     }else{
                         foreach ($_POST["cdx"] as $key => $value) {
