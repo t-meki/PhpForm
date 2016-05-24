@@ -4,45 +4,62 @@
     <title>PhpFormResult</title>
     <link rel="stylesheet" href="form_styles.css">
 </head>
-
 <body style="background-color : #AAEEDD">
     <h2>お問い合わせ完了</h2>
-    <p>
-        <?php
-        $counter_file = 'counter.txt';
-        $counter_lenght = 8;
+    <?php
 
-        $fp = fopen($counter_file, 'r+');
+    $counter_file = 'contact_log.txt';
+    $counter_lenght = 8;
 
-        if ($fp){
-            if (flock($fp, LOCK_EX)){
+    $fp = fopen($counter_file, 'r+');
 
-                $counter = fgets($fp, $counter_lenght);
-                $counter++;
+    if ($fp){
+        if (flock($fp, LOCK_EX)){
 
-                rewind($fp);
+            $counter = fgets($fp, $counter_lenght);
+            $counter++;
 
-                if (fwrite($fp,  $counter) === FALSE){
-                    print('ファイル書き込みに失敗しました');
-                }
+            rewind($fp);
 
-                flock($fp, LOCK_UN);
+            if (fwrite($fp,  $counter) === FALSE){
+                print('ファイル書き込みに失敗しました');
             }
+
+            flock($fp, LOCK_UN);
         }
-        fclose($fp);
-        print('ご利用ありがとうございます。質問番号'.$counter.'番で受け付けました。');
-        ?>
-    </p>
+    }
+
+    fclose($fp);
+
+    print('ご利用ありがとうございます。質問番号'.$counter.'番で受け付けました。');
+
+    ?>
+
     <table>
         <tr>
             <td>姓名</td>
             <td>
                 <?php
+                    $fp = fopen($counter_file, 'a');
+
+                    $var = "\n" .$counter ."姓名:";
                     if($_POST["name1"]!=='' and $_POST["name2"]!==''){
                         echo $_POST["name1"] ." " .$_POST["name2"];
+                        $var .= $_POST["name1"] ." " .$_POST["name2"] ."\n";
                     }else{
                         echo "姓名が正しく入力されていません ";
+                        $var .= "NONE\n";
                     }
+
+                    if ($fp){
+                        if (flock($fp, LOCK_EX)){
+                            if (fwrite($fp,  $var) === FALSE){
+                                print('ファイル書き込みに失敗しました');
+                            }
+                            flock($fp, LOCK_UN);
+                        }
+                    }
+                    fclose($fp);
                 ?>
             </td>
         </tr>
@@ -135,5 +152,29 @@
     </table>
     <p>質問内容</p>
         <p><textarea readonly cols="80" rows="12" name="contained" wrap="hard"><?php echo $_POST["contents"] ; ?></textarea></p>
+
+<!--ログ処理
+
+$fp = fopen($counter_file, 'r+');
+
+if ($fp){
+    if (flock($fp, LOCK_EX)){
+
+        $counter = fgets($fp, $counter_lenght);
+        $counter++;
+
+        rewind($fp);
+
+        if (fwrite($fp,  $counter) === FALSE){
+            print('ファイル書き込みに失敗しました');
+        }
+
+        flock($fp, LOCK_UN);
+    }
+}
+
+fclose($fp);
+?>
+-->
     </body>
 </html>
