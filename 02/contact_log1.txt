@@ -1,0 +1,169 @@
+01
+NAME:NAME: 
+GENDER:ADDRESS:TEL: -  - MAIL:@WHERE:NONE
+CATEGORY:
+QUESTION:
+2
+NAME:NAME: 
+GENDER:ADDRESS:TEL: -  - MAIL:@WHERE:NONE
+CATEGORY:
+QUESTION:
+3
+NAME:NAME: 
+GENDER:ADDRESS:TEL: -  - MAIL:@WHERE:NONE
+CATEGORY:
+QUESTION:
+4
+NAME:NAME: 
+GENDER:ADDRESS:TEL: -  - MAIL:@WHERE:NONE
+CATEGORY:
+QUESTION:
+5
+NAME:NAME: 
+GENDER:ADDRESS:TEL: -  - MAIL:@WHERE:NONE
+CATEGORY:
+QUESTION:
+6
+NAME:NAME: 
+GENDER:ADDRESS:TEL: -  - MAIL:@WHERE:NONE
+CATEGORY:
+QUESTION:
+7
+NAME:NAME: 
+GENDER:ADDRESS:TEL: -  - MAIL:@WHERE:NONE
+CATEGORY:
+QUESTION:
+8
+NAME:NONE
+GENDER:M
+ADDRESS:NONE
+TEL:NONE
+MAIL:NONE
+WHERE:NONE
+CATEGORY:HTMLとPHPの対応について
+QUESTION:
+9
+NAME:NAME: 
+GENDER:ADDRESS:TEL: -  - MAIL:@WHERE:NONE
+CATEGORY:
+QUESTION:
+10
+NAME:NAME: 
+GENDER:ADDRESS:TEL: -  - MAIL:@WHERE:NONE
+CATEGORY:
+QUESTION:
+11
+NAME:NONE
+GENDER:M
+ADDRESS:NONE
+TEL:NONE
+MAIL:NONE
+WHERE:NONE
+CATEGORY:HTMLとPHPの対応について
+QUESTION:
+12
+NAME:NAME:粉雪 心白
+GENDER:M
+ADDRESS:あ区しろよ1-14-514TEL:080 - 0304 - 5555MAIL:corbic273@yahoo.comWHERE:ネット 口コミ　街角 新聞・雑誌 新聞・雑誌 
+CATEGORY:HTMLとPHPの対応について
+QUESTION:あああああああああああああああああああああああああああああああああああああ
+いいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいい
+ううううううううううううううううううううううううううううううううううううう
+えええええええええええええええええええええええええええええええええええええ
+おおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおお
+13
+NAME:粉雪 心白
+GENDER:M
+ADDRESS:あ区しろよ1-14-514TEL:080 - 0304 - 5555
+MAIL:corbic273@yahoo.com
+WHERE:ネット 口コミ　街角 新聞・雑誌 新聞・雑誌 
+CATEGORY:HTMLとPHPの対応について
+QUESTION:あああああああああああああああああああああああああああああああああああああ
+いいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいい
+ううううううううううううううううううううううううううううううううううううう
+えええええええええええええええええええええええええええええええええええええ
+おおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおお
+14
+NAME:粉雪 心白
+GENDER:M
+ADDRESS:あ区しろよ1-14-514
+TEL:080 - 0304 - 5555
+MAIL:corbic273@yahoo.com
+WHERE:ネット 口コミ　街角 新聞・雑誌 その他　
+CATEGORY:HTMLとPHPの対応について
+QUESTION:あああああああああああああああああああああああああああああああああああああ
+いいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいい
+ううううううううううううううううううううううううううううううううううううう
+えええええええええええええええええええええええええええええええええええええ
+おおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおお
+15
+NAME:粉雪 心白
+GENDER:M
+ADDRESS:あ区しろよ1-14-514
+TEL:080 - 0304 - 5555
+MAIL:corbic273@yahoo.com
+WHERE:ネット 口コミ　街角 新聞・雑誌 その他　
+CATEGORY:HTMLとPHPの対応について
+QUESTION:あああああああああああああああああああああああああああああああああああああ
+いいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいい
+ううううううううううううううううううううううううううううううううううううう
+えええええええええええええええええええええええええええええええええええええ
+おおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおお
+16
+NAME:粉雪 心白
+GENDER:M
+ADDRESS:あ区しろよ1-14-514
+TEL:080 - 0304 - 5555
+MAIL:corbic273@yahoo.com
+WHERE:ネット 口コミ　街角 新聞・雑誌 その他　
+CATEGORY:HTMLとPHPの対応について
+QUESTION
+あああああああああああああああああああああああああああああああああああああ
+いいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいい
+ううううううううううううううううううううううううううううううううううううう
+えええええええええええええええええええええええええええええええええええええ
+おおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおお
+17
+NAME:粉雪 心白
+GENDER:M
+ADDRESS:あ区しろよ1-14-514
+TEL:080 - 0304 - 5555
+MAIL:corbic273@yahoo.com
+WHERE:ネット 口コミ　街角 新聞・雑誌 その他　
+CATEGORY:HTMLとPHPの対応について
+QUESTION
+あああああああああああああああああああああああああああああああああああああ
+いいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいい
+ううううううううううううううううううううううううううううううううううううう
+えええええええええええええええええええええええええええええええええええええ
+おおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおお
+18
+NAME:NONE
+GENDER:M
+ADDRESS:NONE
+TEL:NONE
+MAIL:NONE
+WHERE:NONE
+CATEGORY:HTMLとPHPの対応について
+QUESTION
+
+19
+NAME:NONE
+GENDER:M
+ADDRESS:NONE
+TEL:NONE
+MAIL:NONE
+WHERE:NONE
+CATEGORY:HTMLとPHPの対応について
+QUESTION
+
+20
+NAME:NONE
+GENDER:M
+ADDRESS:NONE
+TEL:NONE
+MAIL:NONE
+WHERE:NONE
+CATEGORY:HTMLとPHPの対応について
+QUESTION
+
