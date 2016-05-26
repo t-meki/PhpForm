@@ -13,6 +13,8 @@
 
         $fp = fopen($counter_file, 'r+');
 
+
+
         if ($fp){
             if (flock($fp, LOCK_EX)){
 
