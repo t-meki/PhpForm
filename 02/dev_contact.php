@@ -1,35 +1,39 @@
 <?php
-	$contactname = $_POST["name1"] .$_POST["name2"];
-	$contactmail = $_POST["mail1"] .'@' .$_POST["mail2"];
-	$contents    = $_POST["contents"];
-    $telephone_num = $_POST["tel"][0] .$_POST["tel"][1] .$_POST["tel"][2];
+	if(isset($_POST['submit']) && $_POST['submit'] === "送信"){
+		$name1 = $_POST["name1"];
+		$name2 = $_POST["name2"];
+		$name = $_POST["name1"]  .$_POST["name2"];
+
+		$mail1 = $_POST["mail1"];
+		$mail2 = $_POST["mail2"];
+		$mail = $_POST["mail1"] .'@' .$_POST["mail2"];
+
+		$contents    = $_POST["contents"];
+    	$telephone_num = $_POST["tel"][0] .$_POST["tel"][1] .$_POST["tel"][2];
 	//入力チェック
-	$errormsg = array();
+		$errormsg = array();
 	//名前
-	if ($contactname == null) {
-		$errormsg[] = "名前を入力してください。";
-	}
-	if (mb_strlen($contactname) > 20) {
-		$errormsg[] = "名前は20文字以内で入力して下さい。";
-	}
+		if ($name1 == null) {
+			$errormsg[] = "名前を入力してください。";
+		}
+		if (mb_strlen($name) > 20) {
+			$errormsg[] = "名前は20文字以内で入力して下さい。";
+		}
 	//メール
-	if ($contactmail == null) {
-		$errormsg[] = "メールを入力してください。";
-	}
-	$ret = preg_match("/^[a-zA-Z0-9_\.\-]+?@[A-Za-z0-9_\.\-]+$/", $contactmail);
-	if (!$ret) {
-		$errormsg[] = "メールを正しい形式で入力して下さい。";
-	}
+		if ($mail == null) {
+			$errormsg[] = "メールを入力してください。";
+		}
+		$ret = preg_match("/^[a-zA-Z0-9_\.\-]+?@[A-Za-z0-9_\.\-]+$/", $mail);
+		if (!$ret) {
+			$errormsg[] = "メールを正しい形式で入力して下さい。";
+		}
 	//内容
-	if ($contents == null) {
-		$errormsg[] = "内容を入力して下さい。";
+		if ($contents == null) {
+			$errormsg[] = "質問内容を入力して下さい。";
+		}
 	}
-    //TEL
-    $ret = preg_match("/^[0-9]$/", $telephone_num);
-    if (!ret or $telephone_num)!==7 or mb_strlen($telephone_num)!==8) {
-        $errormsg[] = "正しく入力して下さい。";
-    }
 ?>
+
 <html>
 <head>
     <meta charset="UTF-8">
@@ -44,14 +48,15 @@
 </header>
 
 <body style="background-color : #AAEEDD">
-    <?php if (count($errormsg) > 0): ?>
-    <div id="errmsg">
-    <?php foreach ($errormsg as $msg): ?>
-    ・<?=$msg?><br />
-    <?php endforeach; ?>
-    </div>
+	<?php if (count($errormsg) > 0): ?>
+	<div id="errmsg">
+	<?php foreach ($errormsg as $msg): ?>
+		・<?php echo $msg;?><br />
+	<?php endforeach; ?>
+	</div>
 
-    <form action="dev_result.php" method="post">
+
+    <form action="./dev_contact.php" method="post">
     <table rules="none">
     <tr>
         <td>・姓</td>　
@@ -59,7 +64,7 @@
     </tr>
     <tr>
         <td>・名</td>
-        <td><input type="text" name="name2" size="20"></td>
+        <td><input type="text" name="name2" size="20" /></td>
     </tr>
     <tr>
         <td>・性別</td>
@@ -111,7 +116,7 @@
     </tr>
     </table>
 
-    <p>・質問内容<p>
+    <p>・質問内容</p>
     <p>　
         <textarea cols="70" rows="5" name="contents" ></textarea>
     </p>
@@ -121,49 +126,6 @@
     <input type="reset" value="リセット">
     </p>
     </form>
-    <?php else: ?>
-        <table id="contact-form" border="1" cellpadding="0" cellspacing="0">
-	<tr>
-		<th>
-			名前
-		</th>
-		<td>
-			<?= $contactname ?>
-		</td>
-	</tr>
-	<tr>
-		<th>
-			メールアドレス
-		</th>
-		<td>
-			<?= $contactmail ?>
-		</td>
-	</tr>
-	<tr>
-		<th>
-			内容
-		</th>
-		<td>
-			<?= $contents ?>
-		</td>
-	</tr>
-	<tr>
-		<th colspan="2">
-			<form action="./end.php" method="post">
-				<input type="hidden" name="contactname" value="<?= $contactname ?>">
-				<input type="hidden" name="contactmail" value="<?= $contactmail ?>">
-				<input type="hidden" name="contents" value="<?= $contents ?>">
-				<input type="submit" value="送信" />
-			</form>
-			<form action="./input.php" method="post">
-				<input type="hidden" name="contactname" value="<?= $contactname ?>">
-				<input type="hidden" name="contactmail" value="<?= $contactmail ?>">
-				<input type="hidden" name="contents" value="<?= $contents ?>">
-				<input type="submit" value="内容修正" />
-			</form>
-		</th>
-	</tr>
-</table>
-    <?php endif; ?>
+
 </body>
 </html>
