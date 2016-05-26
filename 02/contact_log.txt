@@ -1,23 +1,49 @@
 1
-1姓名:あああ あああ
-
-1
-姓名:あああ あああ
-
-1
-姓名:NONE
-
-1
-姓名:NONE
-
-1
-姓名: 
+NAME:aaa aaa
 GENDER:M
-8
-NAME:ああああ いいいい
-GENDER:Unknown
-ADDRESS:あああ
-TEL:050 - 5555 - 5555
-MAIL:niodjof@mosokd
-WHERE:ネット 口コミ　街角 新聞・雑誌 その他　
+ADDRESS:aaa
+TEL:a - a - a
+MAIL:a@a
+WHERE:ネット 口コミ　
 CATEGORY:HTMLとPHPの対応について
+QUESTION
+aaaaaaaaaaaaaaaaaaaaaa
+2
+NAME:aaa aaa
+GENDER:M
+ADDRESS:aaa
+TEL:a - a - a
+MAIL:a@a
+WHERE:ネット 口コミ　
+CATEGORY:HTMLとPHPの対応について
+QUESTION
+aaaaaaaaaaaaaaaaaaaaaa
+3
+NAME:aaa aaa
+GENDER:M
+ADDRESS:aaa
+TEL:a - a - a
+MAIL:a@a
+WHERE:ネット 口コミ　
+CATEGORY:HTMLとPHPの対応について
+QUESTION
+aaaaaaaaaaaaaaaaaaaaaa
+4
+NAME:NONE
+GENDER:M
+ADDRESS:NONE
+TEL:NONE
+MAIL:NONE
+WHERE:NONE
+CATEGORY:HTMLとPHPの対応について
+QUESTION
+5
+NAME:NONE
+GENDER:M
+ADDRESS:NONE
+TEL:NONE
+MAIL:NONE
+WHERE:NONE
+CATEGORY:HTMLとPHPの対応について
+QUESTION
+

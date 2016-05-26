@@ -258,7 +258,7 @@
     <p>質問内容</p>
         <p>
 <textarea readonly cols="80" rows="12" name="contained" wrap="hard"><?php
-                $fp = fopen($counter_file, 'a+');
+                $fp = fopen($log_file, 'a+');
                 if ($fp){
                     $var = "QUESTION\n";
                     if (flock($fp, LOCK_EX)){
