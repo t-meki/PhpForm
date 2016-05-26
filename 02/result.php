@@ -168,7 +168,7 @@
                         if (flock($fp, LOCK_EX)){
                             if($_POST["mail1"]!=='' and $_POST["mail2"]!==''){
                                 $var .= $_POST["mail1"] .'@' .$_POST["mail2"] ."\n";
-                                echo $var;
+                                echo $_POST["mail1"] .'@' .$_POST["mail2"] ."\n";
                             }else{
                                 $var .= "NONE\n";
                                 echo "正しく入力されていません" ;
