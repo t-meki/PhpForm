@@ -143,7 +143,7 @@
                             $var = "TEL:";
                             if($_POST["tel"][0]!=='' and $_POST["tel"][1]!=='' and $_POST["tel"][2]!==''){
                                 $var .= $_POST["tel"][0] ." - " .$_POST["tel"][1] ." - " .$_POST["tel"][2] ."\n";
-                                echo $var ;
+                                echo $_POST["tel"][0] ." - " .$_POST["tel"][1] ." - " .$_POST["tel"][2] ."\n";
                             }else{
                                 $var .= "NONE\n";
                                 echo "正しく入力されていません";
@@ -184,7 +184,7 @@
             </td>
         </tr>
         <tr>
-            <td>どこで知ったか？&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td>どこで知ったか？&nbsp;&nbsp;&nbsp;&nbsp;</td>
             <td>
                 <?php
                     $fp = fopen($log_file, 'a+');
@@ -254,26 +254,26 @@
                 ?>
             </td>
         </tr>
-    </table>
-    <p>質問内容</p>
-        <p>
-<textarea readonly cols="80" rows="12" name="contained" wrap="hard"><?php
-                $fp = fopen($log_file, 'a+');
-                if ($fp){
-                    $var = "QUESTION\n";
-                    if (flock($fp, LOCK_EX)){
-                        $var .= $_POST["contents"] ."\n";
-                        echo $_POST["contents"] ."\n";
+        <tr>
+            <td>質問内容</td>
+<td><textarea cols="50" rows="7" name="contents" readonly><?php
+                            $fp = fopen($log_file, 'a+');
+                                if ($fp){
+                                    $var = "QUESTION\n";
+                                    if (flock($fp, LOCK_EX)){
+                                        $var .= $_POST["contents"] ."\n";
+                                        echo $_POST["contents"] ."\n";
 
-                        if (fwrite($fp, $var) === FALSE){
-                            print('ファイル書き込みに失敗しました');
-                        }
-                        flock($fp, LOCK_UN);
-                    }
-                }
-                fclose($fp);
-            ?>
-            </textarea>
-        </p>
+                                        if (fwrite($fp, $var) === FALSE){
+                                            print('ファイル書き込みに失敗しました');
+                                        }
+                                        flock($fp, LOCK_UN);
+                                    }
+                                }
+                                fclose($fp);
+?></textarea></td>
+        </tr>
+    </table>
+
     </body>
 </html>
