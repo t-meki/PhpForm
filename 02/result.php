@@ -254,26 +254,27 @@
                 ?>
             </td>
         </tr>
-    </table>
-    <p>質問内容</p>
-        <p>
-<textarea readonly cols="80" rows="12" name="contained" wrap="hard"><?php
-                $fp = fopen($log_file, 'a+');
-                if ($fp){
-                    $var = "QUESTION\n";
-                    if (flock($fp, LOCK_EX)){
-                        $var .= $_POST["contents"] ."\n";
-                        echo $_POST["contents"] ."\n";
+        <tr>
+            <td>・質問内容</td>
+<td><textarea cols="50" rows="7" name="contents" ><?php
+                            $fp = fopen($log_file, 'a+');
+                                if ($fp){
+                                    $var = "QUESTION\n";
+                                    if (flock($fp, LOCK_EX)){
+                                        $var .= $_POST["contents"] ."\n";
+                                        echo $_POST["contents"] ."\n";
 
-                        if (fwrite($fp, $var) === FALSE){
-                            print('ファイル書き込みに失敗しました');
-                        }
-                        flock($fp, LOCK_UN);
-                    }
-                }
-                fclose($fp);
-            ?>
-            </textarea>
-        </p>
+                                        if (fwrite($fp, $var) === FALSE){
+                                            print('ファイル書き込みに失敗しました');
+                                        }
+                                        flock($fp, LOCK_UN);
+                                    }
+                                }
+                                fclose($fp);
+?></textarea></td>
+        </tr>
+    </table>
+
+    <p>質問内容</p>
     </body>
 </html>

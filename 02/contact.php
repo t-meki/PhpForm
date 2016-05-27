@@ -47,7 +47,7 @@
         </td>
     </tr>
     <tr>
-        <td>・どこで知ったか&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td>・どこで知ったか</td>
         <td>
             <input type="checkbox" name="cdx[]" value="c1">ネット
             <input type="checkbox" name="cdx[]" value="c2">口コミ
@@ -67,17 +67,19 @@
             </select>
         </td>
     </tr>
+    <tr>
+        <td>・質問内容</td>
+    <td>
+        <textarea cols="50" rows="7" name="contents" ></textarea>
+    </td>
     </table>
 
-    <p>・質問内容<p>
-    <p>　
-        <textarea cols="70" rows="5" name="contents" ></textarea>
-    </p>
     <p>
     <input type="submit" value="送信">
 
     <input type="reset" value="リセット">
     </p>
+
     </form>
 </body>
 </html>
