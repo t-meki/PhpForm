@@ -143,7 +143,7 @@
                             $var = "TEL:";
                             if($_POST["tel"][0]!=='' and $_POST["tel"][1]!=='' and $_POST["tel"][2]!==''){
                                 $var .= $_POST["tel"][0] ." - " .$_POST["tel"][1] ." - " .$_POST["tel"][2] ."\n";
-                                echo $var ;
+                                echo $_POST["tel"][0] ." - " .$_POST["tel"][1] ." - " .$_POST["tel"][2] ."\n";
                             }else{
                                 $var .= "NONE\n";
                                 echo "正しく入力されていません";
@@ -184,7 +184,7 @@
             </td>
         </tr>
         <tr>
-            <td>どこで知ったか？&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td>どこで知ったか？&nbsp;&nbsp;&nbsp;&nbsp;</td>
             <td>
                 <?php
                     $fp = fopen($log_file, 'a+');
@@ -255,8 +255,8 @@
             </td>
         </tr>
         <tr>
-            <td>・質問内容</td>
-<td><textarea cols="50" rows="7" name="contents" ><?php
+            <td>質問内容</td>
+<td><textarea cols="50" rows="7" name="contents" readonly><?php
                             $fp = fopen($log_file, 'a+');
                                 if ($fp){
                                     $var = "QUESTION\n";
@@ -275,6 +275,5 @@
         </tr>
     </table>
 
-    <p>質問内容</p>
     </body>
 </html>
